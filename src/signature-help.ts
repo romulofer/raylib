@@ -1,6 +1,6 @@
 import { ApiIndex } from './api';
 
-// Structural editor shape — matches both real TextEditors and test fakes.
+// Structural editor shape: matches both real TextEditors and test fakes.
 type WordHit = { getText(): string; range: unknown };
 type EditorLike = { getBuffer(): { getWordAt(position: unknown): WordHit | null } };
 

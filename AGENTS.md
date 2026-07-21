@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Guidance for AI agents working on **pulsar-raylib** — a Pulsar package that adds raylib code completion and writing automations to the Pulsar editor (the community fork of Atom).
+Guidance for AI agents working on **pulsar-raylib**, a Pulsar package that adds raylib code completion and writing automations to the Pulsar editor (the community fork of Atom).
 
 Human contributors: see the project spec in `docs/superpowers/specs/`. This file adds rules specific to automated agents. Rules here are mandatory.
 
@@ -12,16 +12,16 @@ The host editor source lives at `../../pulsar`. Read `../../pulsar/AGENTS.md` fo
 
 ## Repository layout
 
-- `lib/` — package source; `main.js` is the entry (`activate`/`deactivate`, service registration).
-- `spec/` — Jasmine test suites, run via the Pulsar test runner.
-- `snippets/` — raylib snippet definitions.
-- `keymaps/`, `menus/`, `styles/` — package resources.
-- `data/` — raylib API definitions used to build completions.
-- `docs/` — specs and design docs.
+- `lib/`, package source; `main.js` is the entry (`activate`/`deactivate`, service registration).
+- `spec/`, Jasmine test suites, run via the Pulsar test runner.
+- `snippets/`, raylib snippet definitions.
+- `keymaps/`, `menus/`, `styles/`, package resources.
+- `data/`, raylib API definitions used to build completions.
+- `docs/`, specs and design docs.
 
 ## Toolchain
 
-- **Node.js**: match the host — pinned to `20.16.0` (see `../../pulsar/.nvmrc`).
+- **Node.js**: match the host, pinned to `20.16.0` (see `../../pulsar/.nvmrc`).
 - **Package manager**: `bun`. `npm` and `yarn` are not supported. Use `bun install` and `bun run <script>`.
 - **Runtime**: Electron `30.5.1` (host-provided).
 - Install and test the package inside a Pulsar dev session (`ppm link` / `--dev`), not standalone.
@@ -35,6 +35,7 @@ The host editor source lives at `../../pulsar`. Read `../../pulsar/AGENTS.md` fo
 
 - Match host ESLint conventions (`../../pulsar/.eslintrc.js`): no space before named function parens; space before anonymous/arrow parens; prefix unused vars with `_`; `atom` is a global.
 - Match the existing conventions of the file you edit. Do not reformat unrelated code.
+- **No em dashes.** Do not use em dashes (`—`) in any authored content: prose, code comments, documentation, README, or commit messages. Use a comma, colon, parentheses, or separate sentences instead.
 
 ## Agent rules
 
@@ -52,8 +53,8 @@ The host editor source lives at `../../pulsar`. Read `../../pulsar/AGENTS.md` fo
 
 ## References
 
-- `../../pulsar/AGENTS.md` — host editor agent rules.
-- `../../pulsar/packages/autocomplete-plus` — the completion provider service contract.
-- `../../pulsar/CONTRIBUTING.md` — host contributor guide.
+- `../../pulsar/AGENTS.md`, host editor agent rules.
+- `../../pulsar/packages/autocomplete-plus`, the completion provider service contract.
+- `../../pulsar/CONTRIBUTING.md`, host contributor guide.
 
 [autocomplete-plus]: ../../pulsar/packages/autocomplete-plus

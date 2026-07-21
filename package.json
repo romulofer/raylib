@@ -7,6 +7,14 @@
   "author": "Rômulo Fernandes Evangelista (https://github.com/romulofer)",
   "license": "MIT",
   "keywords": ["raylib", "c", "cpp", "autocomplete", "pulsar", "snippets"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/romulofer/raylib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/romulofer/raylib/issues"
+  },
+  "homepage": "https://github.com/romulofer/raylib#readme",
   "engines": {
     "atom": "*",
     "node": ">=12"
