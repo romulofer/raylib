@@ -1,0 +1,16 @@
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      {
+        'label': 'raylib'
+        'submenu': [
+          { 'label': 'Insert Main Loop', 'command': 'raylib:insert-main-loop' }
+          { 'label': 'Insert Starter File (C)', 'command': 'raylib:insert-starter-file-c' }
+          { 'label': 'Insert Starter File (C++)', 'command': 'raylib:insert-starter-file-cpp' }
+          { 'label': 'Run Project', 'command': 'raylib:run' }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "functions": [
+    {
+      "name": "InitWindow",
+      "description": "Initialize window and OpenGL context",
+      "returnType": "void",
+      "params": [
+        { "type": "int", "name": "width" },
+        { "type": "int", "name": "height" },
+        { "type": "const char *", "name": "title" }
+      ]
+    },
+    {
+      "name": "InitAudioDevice",
+      "description": "Initialize audio device and context",
+      "returnType": "void",
+      "params": []
+    }
+  ],
+  "structs": [
+    {
+      "name": "Color",
+      "description": "Color, 4 components",
+      "fields": [
+        { "type": "unsigned char", "name": "r", "description": "red" }
+      ]
+    }
+  ],
+  "enums": [
+    {
+      "name": "KeyboardKey",
+      "description": "Keyboard keys",
+      "values": [
+        { "name": "KEY_SPACE", "value": 32, "description": "Key: Space" }
+      ]
+    }
+  ],
+  "defines": [
+    { "name": "RAYLIB_VERSION", "type": "STRING", "value": "6.0", "description": "raylib version string" }
+  ]
+}

@@ -1,0 +1,44 @@
+'.source.c, .source.cpp':
+  'raylib main loop':
+    'prefix': 'rlloop'
+    'body': """
+      while (!WindowShouldClose()) {
+          BeginDrawing();
+          ClearBackground(RAYWHITE);
+          $0
+          EndDrawing();
+      }
+    """
+  'raylib window scaffold':
+    'prefix': 'rlwindow'
+    'body': """
+      InitWindow(${1:800}, ${2:450}, "${3:raylib}");
+      SetTargetFPS(${4:60});
+      $0
+      CloseWindow();
+    """
+  'raylib drawing block':
+    'prefix': 'rldraw'
+    'body': """
+      BeginDrawing();
+      ClearBackground(${1:RAYWHITE});
+      $0
+      EndDrawing();
+    """
+  'raylib Camera2D setup':
+    'prefix': 'rlcam2d'
+    'body': """
+      Camera2D ${1:camera} = { 0 };
+      ${1:camera}.target = (Vector2){ ${2:0.0f}, ${3:0.0f} };
+      ${1:camera}.offset = (Vector2){ ${4:0.0f}, ${5:0.0f} };
+      ${1:camera}.rotation = ${6:0.0f};
+      ${1:camera}.zoom = ${7:1.0f};
+      $0
+    """
+  'raylib shader load/unload':
+    'prefix': 'rlshader'
+    'body': """
+      Shader ${1:shader} = LoadShader(${2:0}, "${3:shader.fs}");
+      $0
+      UnloadShader(${1:shader});
+    """

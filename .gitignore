@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# TypeScript build output (compiled from src/ by `bun run build`)
+lib/
+
+# Editor / OS cruft
+.DS_Store
+*.log
+
+# AI reference artifacts (agent-generated specs/plans, local agent config)
+docs/
+.claude/
+.cursor/
+.aider*

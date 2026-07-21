@@ -1,0 +1,49 @@
+{
+  "name": "raylib",
+  "version": "0.1.0",
+  "private": false,
+  "main": "./lib/main.js",
+  "description": "raylib 6.0 code completion, snippets, boilerplate, and a run button for C/C++ in Pulsar.",
+  "author": "Rômulo Fernandes Evangelista (https://github.com/romulofer)",
+  "license": "MIT",
+  "keywords": ["raylib", "c", "cpp", "autocomplete", "pulsar", "snippets"],
+  "engines": {
+    "atom": "*",
+    "node": ">=12"
+  },
+  "scripts": {
+    "build": "tsc && rm -rf lib/spec/fixtures && cp -R src/spec/fixtures lib/spec/fixtures",
+    "prepare": "bun run build"
+  },
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+        "2.0.0": "provideAutocomplete",
+        "4.0.0": "provideAutocomplete"
+      }
+    },
+    "signature-help": {
+      "versions": {
+        "0.1.0": "provideSignatureHelp"
+      }
+    },
+    "datatip": {
+      "versions": {
+        "0.1.0": "provideDatatip"
+      }
+    }
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/atom": "^1.40.0",
+    "@types/node": "^22.0.0"
+  },
+  "dependencies": {}
+}

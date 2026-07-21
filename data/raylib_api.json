@@ -1,0 +1,109 @@
+{
+  "functions": [
+    {
+      "name": "InitWindow",
+      "description": "Initialize window and OpenGL context",
+      "returnType": "void",
+      "params": [
+        { "type": "int", "name": "width" },
+        { "type": "int", "name": "height" },
+        { "type": "const char *", "name": "title" }
+      ]
+    },
+    {
+      "name": "CloseWindow",
+      "description": "Close window and unload OpenGL context",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "WindowShouldClose",
+      "description": "Check if application should close (KEY_ESCAPE pressed or windows close icon clicked)",
+      "returnType": "bool",
+      "params": []
+    },
+    {
+      "name": "BeginDrawing",
+      "description": "Setup canvas (framebuffer) to start drawing",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "EndDrawing",
+      "description": "End canvas drawing and swap buffers (double buffering)",
+      "returnType": "void",
+      "params": []
+    },
+    {
+      "name": "ClearBackground",
+      "description": "Set background color (framebuffer clear color)",
+      "returnType": "void",
+      "params": [{ "type": "Color", "name": "color" }]
+    },
+    {
+      "name": "DrawText",
+      "description": "Draw text (using default font)",
+      "returnType": "void",
+      "params": [
+        { "type": "const char *", "name": "text" },
+        { "type": "int", "name": "posX" },
+        { "type": "int", "name": "posY" },
+        { "type": "int", "name": "fontSize" },
+        { "type": "Color", "name": "color" }
+      ]
+    },
+    {
+      "name": "SetTargetFPS",
+      "description": "Set target FPS (maximum)",
+      "returnType": "void",
+      "params": [{ "type": "int", "name": "fps" }]
+    }
+  ],
+  "structs": [
+    {
+      "name": "Color",
+      "description": "Color, 4 components, R8G8B8A8 (32bit)",
+      "fields": [
+        { "type": "unsigned char", "name": "r", "description": "Color red value" },
+        { "type": "unsigned char", "name": "g", "description": "Color green value" },
+        { "type": "unsigned char", "name": "b", "description": "Color blue value" },
+        { "type": "unsigned char", "name": "a", "description": "Color alpha value" }
+      ]
+    },
+    {
+      "name": "Vector2",
+      "description": "Vector2, 2 components",
+      "fields": [
+        { "type": "float", "name": "x", "description": "Vector x component" },
+        { "type": "float", "name": "y", "description": "Vector y component" }
+      ]
+    },
+    {
+      "name": "Camera2D",
+      "description": "Camera2D, defines position/orientation in 2d space",
+      "fields": [
+        { "type": "Vector2", "name": "offset", "description": "Camera offset (displacement from target)" },
+        { "type": "Vector2", "name": "target", "description": "Camera target (rotation and zoom origin)" },
+        { "type": "float", "name": "rotation", "description": "Camera rotation in degrees" },
+        { "type": "float", "name": "zoom", "description": "Camera zoom (scaling), should be 1.0f by default" }
+      ]
+    }
+  ],
+  "enums": [
+    {
+      "name": "KeyboardKey",
+      "description": "Keyboard keys (US keyboard layout)",
+      "values": [
+        { "name": "KEY_NULL", "value": 0, "description": "Key: NULL, used for no key pressed" },
+        { "name": "KEY_SPACE", "value": 32, "description": "Key: Space" },
+        { "name": "KEY_ESCAPE", "value": 256, "description": "Key: Esc" },
+        { "name": "KEY_ENTER", "value": 257, "description": "Key: Enter" }
+      ]
+    }
+  ],
+  "defines": [
+    { "name": "RAYLIB_VERSION", "type": "STRING", "value": "6.0", "description": "raylib version string" },
+    { "name": "PI", "type": "FLOAT", "value": 3.14159265358979323846, "description": "Pi constant" },
+    { "name": "RAYWHITE", "type": "COLOR", "value": "CLITERAL(Color){ 245, 245, 245, 255 }", "description": "Off-white background color" }
+  ]
+}
