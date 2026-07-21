@@ -1,12 +1,19 @@
 {
   "name": "raylib",
-  "version": "0.1.0",
+  "version": "0.11.0",
   "private": false,
   "main": "./lib/main.js",
   "description": "raylib 6.0 code completion, snippets, boilerplate, and a run button for C/C++ in Pulsar.",
   "author": "Rômulo Fernandes Evangelista (https://github.com/romulofer)",
   "license": "MIT",
-  "keywords": ["raylib", "c", "cpp", "autocomplete", "pulsar", "snippets"],
+  "keywords": [
+    "raylib",
+    "c",
+    "cpp",
+    "autocomplete",
+    "pulsar",
+    "snippets"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/romulofer/raylib.git"
